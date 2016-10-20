@@ -19,20 +19,20 @@ while (pnts.length && plys.length) {
     combined.push({ type: 'FeatureCollection', features: [pl] });
 }
 
-console.time('coordEach#1');
+console.time('coord_each#1');
 var sum = 0;
 combined.forEach(function(c) {
     meta.coordEach(c, function(coord) {
         sum += coord[0];
     });
 });
-console.timeEnd('coordEach#1');
+console.timeEnd('coord_each#1');
 
-console.time('coordEach#2');
+console.time('coord_each#2');
 var sum = 0;
 combined.forEach(function(c) {
     meta2.coordEach(c, function(coord) {
         sum += coord[0];
     });
 });
-console.timeEnd('coordEach#2');
+console.timeEnd('coord_each#2');

@@ -68,7 +68,7 @@ collection(pointFeature).forEach(function(input) {
 });
 
 featureAndCollection(pointGeometry).forEach(function(input) {
-    test('coordEach#Point', function(t) {
+    test('coord_each#Point', function(t) {
         meta.coordEach(input, function(coord) {
             t.deepEqual(coord, [0, 0]);
             t.end();
@@ -77,7 +77,7 @@ featureAndCollection(pointGeometry).forEach(function(input) {
 });
 
 featureAndCollection(lineStringGeometry).forEach(function(input) {
-    test('coordEach#LineString', function(t) {
+    test('coord_each#LineString', function(t) {
         var output = [];
         meta.coordEach(input, function(coord) {
             output.push(coord);
@@ -88,7 +88,7 @@ featureAndCollection(lineStringGeometry).forEach(function(input) {
 });
 
 featureAndCollection(polygonGeometry).forEach(function(input) {
-    test('coordEach#Polygon', function(t) {
+    test('coord_each#Polygon', function(t) {
         var output = [];
         meta.coordEach(input, function(coord) {
             output.push(coord);
@@ -99,7 +99,7 @@ featureAndCollection(polygonGeometry).forEach(function(input) {
 });
 
 featureAndCollection(polygonGeometry).forEach(function(input) {
-    test('coordEach#Polygon excludeWrapCoord', function(t) {
+    test('coord_each#Polygon excludeWrapCoord', function(t) {
         var output = [];
         meta.coordEach(input, function(coord) {
             output.push(coord);
@@ -112,7 +112,7 @@ featureAndCollection(polygonGeometry).forEach(function(input) {
 
 
 featureAndCollection(multiPolygonGeometry).forEach(function(input) {
-    test('coordEach#MultiPolygon', function(t) {
+    test('coord_each#MultiPolygon', function(t) {
         var output = [];
         meta.coordEach(input, function(coord) {
             output.push(coord);
@@ -123,7 +123,7 @@ featureAndCollection(multiPolygonGeometry).forEach(function(input) {
 });
 
 featureAndCollection(geometryCollection).forEach(function(input) {
-    test('coordEach#GeometryCollection', function(t) {
+    test('coord_each#GeometryCollection', function(t) {
         var output = [];
         meta.coordEach(input, function(coord) {
             output.push(coord);
