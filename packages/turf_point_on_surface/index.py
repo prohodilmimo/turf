@@ -17,7 +17,7 @@ import math
 #
 # //=polygon
 #
-# var pointOnPolygon = turf.pointOnSurface(polygon);
+# var pointOnPolygon = turf.point_on_surface(polygon);
 #
 # var resultFeatures = polygon.features.concat(pointOnPolygon);
 # var result = {
@@ -26,7 +26,7 @@ import math
 # };
 #
 # //=result
-def pointOnSurface(feature_collection):
+def point_on_surface(feature_collection):
     # normalize
     if feature_collection.type != "FeatureCollection":
         if feature_collection.type != "Feature":
